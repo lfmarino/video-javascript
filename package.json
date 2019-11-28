@@ -1,0 +1,26 @@
+{
+  "name": "video-javascript",
+  "version": "1.0.0",
+  "description": "Javascript Video Player",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lfmarino/video-javascript.git"
+  },
+  "keywords": [
+    "video"
+  ],
+  "author": "Felipe Marin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lfmarino/video-javascript/issues"
+  },
+  "homepage": "https://github.com/lfmarino/video-javascript#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
