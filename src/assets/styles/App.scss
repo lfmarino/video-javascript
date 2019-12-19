@@ -1,0 +1,8 @@
+@import "Vars";
+@import "Media";
+
+body {
+  margin: 0;
+  font-family: $theme-font;
+  background-color: $main-color;
+}
