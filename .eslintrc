@@ -24,6 +24,8 @@
     "import"
   ],
   "rules": {
+    "arrow-parens": "off",
+    "import/no-extraneous-dependencies": "off",
     "react/jsx-filename-extension": 0,
     "array-bracket-spacing": 2,
     "arrow-body-style": 0,
