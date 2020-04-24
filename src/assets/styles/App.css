@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@media only screen and (max-width: 600px) {
+  .login__container {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
+  background-color: #8F57FD;
+}
+
+/*# sourceMappingURL=App.css.map */
