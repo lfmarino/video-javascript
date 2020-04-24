@@ -6,10 +6,15 @@ import gravatar from '../utils/gravatar';
 import '../assets/styles/components/Header.scss';
 import logo from '../assets/static/logo-platzi-video-BW2.png';
 import profile from '../assets/static/icons8-nombre-64.png';
+import { logoutRequest } from '../actions';
 
 const Header = props => {
   const { user } = props;
   const hasUser = Object.keys(user).length > 0;
+
+  const handleLogout = () => {
+    props.logoutRequest({});
+  };
 
   return (
     <header className='header'>
@@ -26,12 +31,27 @@ const Header = props => {
           <p>Perfil</p>
         </div>
         <ul>
-          <li>
-            <a href=''>Cuenta</a>
-          </li>
-          <li>
-            <Link to='/ingreso'>Cerrar sesión</Link>
-          </li>
+          {
+            hasUser ? (
+              <li>
+                <a href=''>{user.name}</a>
+              </li>
+            ) :
+              null
+          }
+
+          {
+            hasUser ?
+              (
+                <li>
+                  <a href='#logout' onClick={handleLogout}>Cerrar sesión</a>
+                </li>
+              ) : (
+                <li>
+                  <Link to='/ingreso'>Iniciar sesión</Link>
+                </li>
+              )
+          }
         </ul>
       </div>
     </header>
@@ -44,4 +64,8 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, null)(Header);
+const mapDispatchToProps = {
+  logoutRequest,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
