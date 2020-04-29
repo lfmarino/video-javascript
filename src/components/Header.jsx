@@ -12,6 +12,10 @@ const Header = props => {
   const { user } = props;
   const hasUser = Object.keys(user).length > 0;
 
+  if (hasUser) {
+    console.log(user);
+  }
+
   const handleLogout = () => {
     props.logoutRequest({});
   };
@@ -34,7 +38,7 @@ const Header = props => {
           {
             hasUser ? (
               <li>
-                <a href=''>{user.name}</a>
+                <a href='/'>{user.name}</a>
               </li>
             ) :
               null
@@ -48,7 +52,7 @@ const Header = props => {
                 </li>
               ) : (
                 <li>
-                  <Link to='/ingreso'>Iniciar sesión</Link>
+                  <Link to='/login'>Iniciar sesión</Link>
                 </li>
               )
           }
