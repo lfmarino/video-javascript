@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+//.main .isHome {
+//  width: 70%;
+//}
+
 .main__title {
   color: white;
   font-size: 25px;
@@ -19,9 +23,10 @@
   font-size: 16px;
   height: 50px;
   padding: 0 20px;
-  width: 70%;
+  width: 80%;
   background-color: rgba(255, 255, 255, 0.1);
   outline: none;
+  margin: 0 auto 20px;
 }
 
 ::placeholder {

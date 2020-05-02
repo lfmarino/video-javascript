@@ -12,16 +12,19 @@ const Header = props => {
   const { user } = props;
   const hasUser = Object.keys(user).length > 0;
 
-  if (hasUser) {
-    console.log(user);
-  }
-
   const handleLogout = () => {
     props.logoutRequest({});
   };
 
   return (
-    <header className='header'>
+    <header
+      className={
+        props.pathname === '/login' ||
+        props.pathname === '/register' ?
+          'header-login' :
+          'header'
+      }
+    >
       <Link to='/'>
         <img className='header__img' src={logo} alt='logo header' />
       </Link>

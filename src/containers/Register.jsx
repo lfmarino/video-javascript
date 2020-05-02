@@ -53,7 +53,7 @@ const Register = props => {
           />
           <button className='button'>Registrarme</button>
         </form>
-        <Link to='/ingreso'>Iniciar sesión</Link>
+        <Link to='/login'>Iniciar sesión</Link>
       </section>
     </section>
   );
